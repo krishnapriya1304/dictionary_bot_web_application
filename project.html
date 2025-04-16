@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dictionary Bot</title>
+    <link rel="icon" href="dictionary-icon-vector.jpg">
+    <style>
+      body {
+          background-image: url('static/word.jpg');
+          background-size: cover;         /* Cover the full screen */
+          background-repeat: no-repeat;   /* Prevent repeat */
+          background-position: center;    /* Center the image */
+          height: 100vh;                  /* Full height */
+          margin: 0;
+      }
+      body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* black overlay with 50% opacity */
+    z-index: -1;
+  }
+  h4{
+    margin-top: 0px;
+    text-shadow:  1px 2px 2px rgb(49, 48, 48),0 0 25px rgb(78, 70, 75),0 0 5px rgb(234, 73, 140);
+  }
+      h1{
+        background-color:none;
+        text-align: center;
+        padding-top: 20px;
+        font-size: 4rem;
+        margin-bottom: 0px;
+        color: lightgray;
+        text-shadow:  1px 2px 2px rgb(77, 75, 75),0 0 25px rgb(78, 70, 75),0 0 5px rgb(234, 73, 140);
+       
+      }
+      h3{
+        background-color:none;
+        text-align: center;
+        font-style: italic;
+        font-size: 2rem;
+        
+        color: #fff;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px cyan;
+      }
+      .buttons{
+        text-align: center;
+        width: 200px;
+        height: 150px;
+        box-shadow: 0 4px 15px rgba(9, 9, 9, 0.915);
+        background-color:none;
+        padding: 20px;
+        margin-left: 575px;
+        margin-top: 20px;
+  
+      }
+      .search{
+        text-align: center;
+        text-align: center;
+        width: 300px;
+        height: 50px;
+        box-shadow: 0 4px 15px rgba(245, 241, 241, 0.948);
+        background-color:none;
+        padding: 20px;
+        margin-left: 525px;
+      }
+      .buttons .word{
+        margin-top: 20px;
+        text-align: center;
+      }
+      .buttons .spell{
+        margin-top: 20px;
+        text-align: center;
+      }
+      .buttons .score{
+        margin-top: 20px;
+        text-align: center;
+      }
+      .link{
+        margin-top: 20px;
+        text-align: center;
+      }
+      .link a{
+        color: black;
+        text-decoration: none;
+        text-shadow: 1px 1px 2px rgb(151, 129, 129), 0 0 25px blue, 0 0 5px cyan; ;
+      }
+      .search input[type="text"] {
+  padding: 10px;
+  width: 200px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  background-color: lightgray;
+  color: black;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  opacity: 0.5;
+}
+.search input[type="submit"] {
+  
+  border: none;
+  border-radius: 8px;
+  background-color:lightgray;
+  color:black;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.buttons input[type="submit"] {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color:lightgray;
+  color:black;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+    </style>
+
+  </head>
+
+  <body style="color: bisque;background-color: black;">
+    
+      <h1>DICTIONARY BOT 🕮</h1>
+      <h3>The Smarter Way to Explore Language!</h3>
+<!-- Search Form -->
+<div class="search">
+  <form action="/search" method="POST">
+    <input type="text" name="word" placeholder="Enter any word">
+    <input type="submit" value="Search">
+  </form>
+</div>
+      <!-- Buttons Section -->
+<div class="buttons">
+
+  
+  <h4>📚 Explore More</h4>
+  <!-- Word of the Day Button -->
+  <div class="word">
+    
+    <form action="/wordoftheday" method="get">
+      <input type="submit" value="Word of the Day">
+    </form>
+  </div>
+
+  <!-- Spellbee Game Button -->
+  <div class="spell">
+    <form action="/spellbee" method="get">
+      <input type="submit" value="Spellbee Game">
+    </form>
+  </div>
+
+  
+</div>
+
+      <!-- Telegram bot link -->
+       <div class="link">
+         <a href="https://t.me/Project_DictionaryBot" >🚀 Launch Bot on Telegram</a>
+      </div>
+  </body>
+</html>
